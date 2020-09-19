@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-test-nuvolar"
+    }
+  },
+  "defaultProject": "angular-test-nuvolar",
+  "cli": {
+    "analytics": "0e7b4778-36e4-4c90-8adc-e85ebf205f5b"
+  }
 }
