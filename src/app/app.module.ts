@@ -7,6 +7,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { ListedElementComponent } from './listed-element/listed-element.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { ListedElementComponent } from './listed-element/listed-element.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
