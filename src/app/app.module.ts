@@ -8,13 +8,15 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { ListedElementComponent } from './listed-element/listed-element.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     UserCardComponent,
-    ListedElementComponent
+    ListedElementComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
