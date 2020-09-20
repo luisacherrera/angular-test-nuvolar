@@ -9,6 +9,7 @@ import { ListedElementComponent } from './listed-element/listed-element.componen
 
 import { HttpClientModule } from '@angular/common/http';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

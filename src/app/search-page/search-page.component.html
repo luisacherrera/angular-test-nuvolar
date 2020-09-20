@@ -1,1 +1,8 @@
-<p>search-page works!</p>
+<div class="container">
+    <app-search-bar (searchEmitter)="getUsers($event)"></app-search-bar>
+    <ul>
+        <li *ngFor="let result of results">
+            <app-listed-element [user]="result"></app-listed-element>
+        </li>
+    </ul>
+</div>
