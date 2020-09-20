@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
+import { delay } from 'rxjs/operators'; 
 
 @Component({
   selector: 'app-search-page',
@@ -20,6 +21,7 @@ export class SearchPageComponent implements OnInit {
 
   getUsers(search: String) {
     this._userService.getUsers(search)
+      .pipe(delay(500))
       .subscribe({
         next: (response : any)=>{
           this.results = response.items;
