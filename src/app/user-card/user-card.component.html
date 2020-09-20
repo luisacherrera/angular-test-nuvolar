@@ -1,1 +1,25 @@
-<p>user-card works!</p>
+<div *ngIf="user">
+    <p>{{ user.login }}</p>
+    <p>{{ user.name }}</p>
+    <p>{{ user.bio }}</p>
+    <p>{{ user.email }}</p>
+    <a href="{{ user.html_url }}">Check this user page!</a>
+    
+    <h2>User followers</h2>
+    <ul *ngIf="followers">
+        <li *ngFor="let follower of followers">
+            <a href="{{ follower.html_url }}">
+                <p>{{  follower.login  }}</p>
+            </a>
+        </li>
+    </ul>
+
+    <h2>User repositories</h2>
+    <ul *ngIf="repositories">
+        <li *ngFor="let repo of repositories">
+            <a href="{{ repo.archive_url }}">
+                <p>{{  repo.full_name  }}</p>
+            </a>
+        </li>
+    </ul>
+</div>
