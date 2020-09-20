@@ -6,3 +6,19 @@
 </header>
 
 <router-outlet></router-outlet>
+
+<div class="change_mode-button" (click)="getDarkMode()" *ngIf="darkMode; else lightMode">
+    <p>Light mode</p>
+    <span class="material-icons">
+        brightness_low
+    </span>
+</div>
+
+<ng-template #lightMode>
+    <div class="change_mode-button" (click)="getDarkMode()">
+        <p>Dark mode</p>
+        <span class="material-icons">
+            brightness_high
+        </span>
+    </div>
+</ng-template>

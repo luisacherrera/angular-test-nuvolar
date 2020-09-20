@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  darkMode : boolean = false;
 
+  getDarkMode() {
+    document.documentElement.classList.toggle('dark-mode');
+    this.darkMode = !this.darkMode;
+  }
 }
