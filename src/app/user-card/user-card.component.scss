@@ -1,0 +1,20 @@
+.card-container {
+    .user-container, .followers-container, .repositories-container {
+        width: 75vw;
+        margin: 0 auto;
+    }
+    
+    .user-container {
+        display: flex;
+        flex-direction: column;
+
+        .user-container_logo {
+            margin: 20px auto;
+
+            img {
+                width: 250px;
+                border-radius: 150px;
+            }
+        }
+    }
+}

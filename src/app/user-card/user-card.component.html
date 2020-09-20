@@ -1,25 +1,39 @@
-<div *ngIf="user">
-    <p>{{ user.login }}</p>
-    <p>{{ user.name }}</p>
-    <p>{{ user.bio }}</p>
-    <p>{{ user.email }}</p>
-    <a href="{{ user.html_url }}">Check this user page!</a>
+<div class="card-container" *ngIf="user">
+    <div class="user-container">
+        <div class="user-container_logo">
+            <img src="{{ user.avatar_url }}" alt="user avatar">
+        </div>
+        <div class="user-container_info">
+            <h2 class="user-container_info_detail">{{ user.login }}</h2>
+            <h4>Name:</h4>
+            <p class="user-container_info_detail">{{ user.name }}</p>
+            <h4>Bio:</h4>
+            <p class="user-container_info_detail">{{ user.bio }}</p>
+            <h4>E-mail:</h4>
+            <p class="user-container_info_detail">{{ user.email }}</p>
+            <a class="user-container_info_detail-link" href="{{ user.html_url }}">Check out this user page!</a>
+        </div>
+    </div>
     
-    <h2>User followers</h2>
-    <ul *ngIf="followers">
-        <li *ngFor="let follower of followers">
-            <a href="{{ follower.html_url }}">
-                <p>{{  follower.login  }}</p>
-            </a>
-        </li>
-    </ul>
+    <div class="followers-container">
+        <h3>{{ user.login }}'s followers</h3>
+        <ul *ngIf="followers">
+            <li *ngFor="let follower of followers">
+                <a href="{{ follower.html_url }}">
+                    <p>{{  follower.login  }}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-    <h2>User repositories</h2>
-    <ul *ngIf="repositories">
-        <li *ngFor="let repo of repositories">
-            <a href="{{ repo.archive_url }}">
-                <p>{{  repo.full_name  }}</p>
-            </a>
-        </li>
-    </ul>
+    <div class="repositories-container">
+        <h3>{{ user.login }}'s repositories</h3>
+        <ul *ngIf="repositories">
+            <li *ngFor="let repo of repositories">
+                <a href="{{ repo.archive_url }}">
+                    <p>{{  repo.full_name  }}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
