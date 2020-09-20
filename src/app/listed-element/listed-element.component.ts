@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./listed-element.component.scss']
 })
 export class ListedElementComponent implements OnInit {
-  @Input() user: Object;
+  @Input() user: any;
 
   constructor() { }
 
