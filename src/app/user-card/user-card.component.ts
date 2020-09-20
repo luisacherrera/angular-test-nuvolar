@@ -28,7 +28,7 @@ export class UserCardComponent implements OnInit {
     })
 
     userObservable.subscribe({
-      next: (value) => {
+      next: (value: any) => {
         this.user = new User(
           value.userInfo.login,
           value.userInfo.html_url,

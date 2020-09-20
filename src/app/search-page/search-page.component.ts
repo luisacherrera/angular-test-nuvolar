@@ -21,7 +21,7 @@ export class SearchPageComponent implements OnInit {
   getUsers(search: String) {
     this._userService.getUsers(search)
       .subscribe({
-        next: (response : Object)=>{
+        next: (response : any)=>{
           this.results = response.items;
           this.noResults = this.results.length > 0 ? false : true;
           this.errorMessage = false;
