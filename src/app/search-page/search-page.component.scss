@@ -1,3 +1,18 @@
+.no-results, .error-message {
+    width: 280px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 70px;
+}
+
+.error-message {
+    background-color: #ff7f7f;
+}
+
+.no-results {
+    background-color: #B5D3E7;
+}
+
 .listed-users_item {
     width: 75vw;
     margin: 0 auto;
