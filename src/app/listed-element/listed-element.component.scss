@@ -6,4 +6,8 @@
         width: 80px;
         border-radius: 50px;
     }
+
+    @media screen and (min-width: 49em) {
+        justify-content: space-evenly;
+    }
 }

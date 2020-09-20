@@ -2,6 +2,10 @@
     .user-container, .followers-container, .repositories-container {
         width: 75vw;
         margin: 0 auto;
+        
+        @media screen and (min-width: 49em) {
+            width: 50em;
+        }
     }
     
     .user-container {
@@ -15,6 +19,11 @@
                 width: 250px;
                 border-radius: 150px;
             }
+        }
+
+        @media screen and (min-width: 49em) {
+            flex-direction: unset;
+            justify-content: space-between;
         }
     }
 
