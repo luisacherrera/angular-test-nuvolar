@@ -1,3 +1,6 @@
-<div>
-    <input type="text" [(ngModel)]="query" (keyup)="fireSearchValue()">
+<div class="search-box">
+    <span class="material-icons search-box_icon">
+        search
+    </span>
+    <input class="search-box_input" type="text" [(ngModel)]="query" (keyup)="fireSearchValue()">
 </div>

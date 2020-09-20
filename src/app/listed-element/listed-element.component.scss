@@ -1,0 +1,9 @@
+.result-user-container {
+    display: flex;
+    justify-content:space-between;
+
+    .result-user-container_image {
+        width: 80px;
+        border-radius: 50px;
+    }
+}
