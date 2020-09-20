@@ -1,0 +1,30 @@
+.no-results, .error-message {
+    width: 280px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 70px;
+}
+
+.error-message {
+    background-color: #ff7f7f;
+}
+
+.no-results {
+    background-color: #B5D3E7;
+}
+
+.listed-users_item {
+    width: 75vw;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 2px 3px 7px #C0C0C0;
+    border-radius: 5px;
+
+    &:hover, &:active {
+        background-color: #C0C0C0;
+    }
+
+    @media screen and (min-width: 49em) {
+        width: 30em;
+    }
+}

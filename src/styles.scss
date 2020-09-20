@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #24292e;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #3F19EC;
+}
+
+.dark-mode {
+    background-color: #24292e;
+    header {
+        filter: invert(1) hue-rotate(180deg);
+    }
+
+    h2, h3, h4, p, .material-icons {
+        color: white;
+    }
+}

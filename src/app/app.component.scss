@@ -1,0 +1,39 @@
+#header {
+    padding: 3vh 2vw;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        width: 50px;
+    }
+
+    h1 {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+
+.change_mode-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 2px 2px black;
+    font-size: 12px;
+    color: white;
+    background-color: #24292e;
+
+    span {
+        padding: 8px 0;
+    }
+
+    &:active {
+        bottom: 18px;
+        right: 18px;
+        box-shadow: 0px 0px black;
+    }
+}

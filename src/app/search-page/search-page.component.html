@@ -1,0 +1,14 @@
+<div class="container">
+    <app-search-bar (searchEmitter)="getUsers($event)"></app-search-bar>
+    <div class="error-message" *ngIf="errorMessage">
+        <p>Seems like something went wrong... try again later!</p>
+    </div>
+    <div class="no-results" *ngIf="noResults">
+        <p>There doesn't seem to be any matches to your search...</p>
+    </div>
+    <ul class="listed-users" *ngIf="!errorMessage">
+        <li class="listed-users_item" *ngFor="let result of results">
+            <app-listed-element [user]="result"></app-listed-element>
+        </li>
+    </ul>
+</div>

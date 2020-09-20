@@ -1,0 +1,50 @@
+.card-container {
+    .user-container, .followers-container, .repositories-container {
+        width: 75vw;
+        margin: 0 auto;
+        
+        @media screen and (min-width: 49em) {
+            width: 50em;
+        }
+    }
+    
+    .user-container {
+        display: flex;
+        flex-direction: column;
+
+        .user-container_logo {
+            margin: 20px auto;
+
+            img {
+                width: 250px;
+                border-radius: 150px;
+            }
+        }
+
+        @media screen and (min-width: 49em) {
+            flex-direction: unset;
+            justify-content: space-between;
+        }
+    }
+
+    .back-button {
+        position: fixed;
+        top: 120px;
+        left: 10px;
+        width: 33px;
+        border-radius: 32px;
+        color: white;
+        background-color: #24292e;
+        box-shadow: 2px 2px black;
+
+        span {
+            font-size: 30px;
+        }
+
+        &:active {
+            top: 122px;
+            left: 12px;
+            box-shadow: 0px 0px black;
+        }
+    }
+}
