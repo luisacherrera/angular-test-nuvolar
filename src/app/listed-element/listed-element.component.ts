@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listed-element',
@@ -7,10 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListedElementComponent implements OnInit {
   @Input() user: any;
+  path : boolean;
 
-  constructor() { }
+  constructor(
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.path = !this._route.snapshot.params.id;
   }
 
 }
