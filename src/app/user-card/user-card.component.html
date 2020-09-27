@@ -19,9 +19,7 @@
         <h3>{{ user.login }}'s followers</h3>
         <ul *ngIf="followers">
             <li *ngFor="let follower of followers">
-                <a href="{{ follower.html_url }}">
-                    <p>{{  follower.login  }}</p>
-                </a>
+                <app-listed-element [user]="follower"></app-listed-element>
             </li>
         </ul>
     </div>

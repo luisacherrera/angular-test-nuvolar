@@ -1,4 +1,13 @@
-<div class="result-user-container" [routerLink]="[user.login]">
-    <img class="result-user-container_image" src="{{ user.avatar_url }}" alt="User Avatar">
-    <p class="result-user-container_nick">{{ user.login }}</p>
+<div class="container">
+    <div *ngIf="path; else linkBlock" class="result-user-container" [routerLink]="[user.login]">
+        <img class="result-user-container_image" src="{{ user.avatar_url }}" alt="User Avatar">
+        <p class="result-user-container_nick">{{ user.login }}</p>
+    </div>
+    
+    <ng-template #linkBlock>
+        <a class="result-user-container" href="{{ user.html_url }}">
+            <img class="result-user-container_image" src="{{ user.avatar_url }}" alt="User Avatar">
+            <p class="result-user-container_nick">{{ user.login }}</p>
+        </a>
+    </ng-template>
 </div>
